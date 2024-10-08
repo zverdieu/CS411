@@ -1,7 +1,7 @@
 from typing import Any
 
 from wildlife_tracker.migration_tracking.migration_path import MigrationPath
-
+#submission
 class Migration:
 
     def __init__(self, migration_id: int, current_location: str, species: str, migration_path: MigrationPath) -> None:
