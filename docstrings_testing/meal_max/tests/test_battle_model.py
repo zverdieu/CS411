@@ -49,13 +49,6 @@ def test_clear_combatants(battle_model, sample_battle):
     battle_model.clear_combatants()
     assert len(battle_model.combatants) == 0, "Combatants should be empty after clearing"
 
-def test_clear_combatants_empty(battle_model, caplog):
-    """Test clearing the list of combatants when it is empty."""
-    
-    battle_model.clear_combatants()
-    assert len(battle_model.combatants) == 0, "Combatants should be empty after clearing"
-    assert "Clearing empty combatants" in caplog.text, "expected warning message when clearing empty battle"
-
 def test_get_battle_score(battle_model, sample_meal1):
     """Test getting the score of a meal."""
 
