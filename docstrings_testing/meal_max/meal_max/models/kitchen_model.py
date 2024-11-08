@@ -32,10 +32,10 @@ def create_meal(meal: str, cuisine: str, price: float, difficulty: str) -> None:
     Creates a new meal in the meals table.
 
     Args:
-        meal (str): The name of the combatant/meal.
+        meal (str): The name of the combatant (meal).
         cuisine (str): The cuisine type of the combatant.
         price (float): The price of the combatant.
-        difficulty (str): The preparation difficulty of the combatant/meal.
+        difficulty (str): The preparation difficulty of the combatant (meal).
 
     Raises:
         ValueError: If price or difficulty are invalid.
@@ -184,7 +184,7 @@ def get_meal_by_id(meal_id: int) -> Meal:
         meal_id (int): The ID of the meal to retrieve.
 
     Returns:
-        Meal: The meal object corresponding to the meal_id.
+        Meal: The `Meal` corresponding to the meal_id.
 
     Raises: ValueError: If the meal is not found or is marked as deleted.
     """
@@ -216,7 +216,7 @@ def get_meal_by_name(meal_name: str) -> Meal:
         meal_name (str): The name of the meal to retrieve.
 
     Returns: 
-        Meal: The meal object corresponding to the meal_name.
+        Meal: The `Meal` object corresponding to the meal_name.
     
     Raises:
         ValueError: If the meal is not found or is marked as deleted
