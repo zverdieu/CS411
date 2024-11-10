@@ -60,7 +60,7 @@ def test_create_meal(mock_cursor):
 
     #Assert that the SQL query was executed with the correct arguments
     expected_arguments = ("Meal Name", "Cuisine Type", 100.50, "HIGH")
-    assert actual_arguments == expected_arguments, f"The SQL query arguments did not match. Expected {expected arguments}, got {actual_arguments}."
+    assert actual_arguments == expected_arguments, f"The SQL query arguments did not match. Expected {expected_arguments}, got {actual_arguments}."
 
 def test_create_meal_duplicate(mock_cursor):
     """Test creating a meal with a duplicate name (should raise an error)."""

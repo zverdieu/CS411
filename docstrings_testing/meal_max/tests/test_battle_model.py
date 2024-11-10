@@ -37,8 +37,8 @@ def test_battle(battle_model, sample_meal1):
     battle_model.combatants.extend(sample_battle)
 
     assert len(battle_model.combattants) == 2
-    assert battle_model.combatants[0].meal = "Meal 1"
-    assert battle_model.combatants[0].meal = "Meal 2"
+    assert battle_model.combatants[0].meal == "Meal 1"
+    assert battle_model.combatants[0].meal == "Meal 2"
 
 def test_clear_combatants(battle_model, sample_battle):
     """Test clearing the list of combatants."""
