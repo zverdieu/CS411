@@ -17,7 +17,7 @@ def mock_update_meal_stats(mocker):
 """Fixtures providing sample meals for the tests."""
 @pytest.fixture
 def sample_meal1():
-    return Meal(1, 'Meal 2', 'Cuisine 1', 10.0, 'MED')
+    return Meal(1, 'Meal 1', 'Cuisine 1', 10.0, 'MED')
 
 @pytest.fixture
 def sample_meal2():
@@ -31,14 +31,14 @@ def sample_meal3():
 def sample_battle(sample_meal1, sample_meal2):
     return [sample_meal1, sample_meal2]
 
-def test_battle(battle_model, sample_meal1):
+def test_battle(battle_model, sample_battle):
     """Test a battle between 2 meals."""
 
     battle_model.combatants.extend(sample_battle)
 
-    assert len(battle_model.combattants) == 2
+    assert len(battle_model.combatants) == 2
     assert battle_model.combatants[0].meal == "Meal 1"
-    assert battle_model.combatants[0].meal == "Meal 2"
+    assert battle_model.combatants[1].meal == "Meal 2"
 
 def test_clear_combatants(battle_model, sample_battle):
     """Test clearing the list of combatants."""
@@ -54,7 +54,7 @@ def test_get_battle_score(battle_model, sample_meal1):
 
     expected_score = 88
     calculated_score = battle_model.get_battle_score(sample_meal1)
-    battle_model.assertEqual(expected_score, calculated_score)
+    assert expected_score == calculated_score
 
 def test_get_combatants(battle_model, sample_battle):
     """Test retrieving all meals from combatants."""
